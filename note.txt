@@ -215,3 +215,12 @@ ng g module moduleName --route moduleName --module app.module(parent module)
 - edit product
 - delete product
 - add new product
+
+
+JsonServer
+----------
+
+to run json files
+npm i --save json-server
+
+npx json-server --watch fileName --port 3000
