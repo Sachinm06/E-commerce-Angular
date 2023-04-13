@@ -10,6 +10,7 @@ export class ViewAllProductComponent implements OnInit {
 
 
   productData: any
+  filterCategory: any
   constructor(private ps: ProductService) { }
   ngOnInit(): void {
     this.ps.viewAllProduct().subscribe((data: any) => {
@@ -19,5 +20,10 @@ export class ViewAllProductComponent implements OnInit {
     })
   }
 
+  filter(category: any) {
+    this.filterCategory = this.productData.filter((i: any) =>
+      i.categoryId == category || category == "")
 
+  }
 }
+

@@ -26,6 +26,7 @@ img {
   max-width: 100%;
   height: 100%;
   user-select: none;
+  margin-left: 60px;
 }
 
 /*===== CARD =====*/
@@ -127,4 +128,14 @@ img {
     flex-direction: column;
     gap: 3rem;
   }
+}
+.branddiv{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+.col-3{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
 }
