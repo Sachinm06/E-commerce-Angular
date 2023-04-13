@@ -14,4 +14,9 @@ export class ProductService {
     return this.http.get('http://localhost:3000/products')
   }
 
+  //view single product
+  viewProduct(pid: any) {
+    return this.http.get('http://localhost:3000/products/' + pid)
+  }
+
 }

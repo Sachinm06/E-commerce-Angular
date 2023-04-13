@@ -224,3 +224,10 @@ to run json files
 npm i --save json-server
 
 npx json-server --watch fileName --port 3000
+
+
+access Params from URL
+----------------------
+
+ActivatedRoute - class used to acccess params
+params - method used to access params

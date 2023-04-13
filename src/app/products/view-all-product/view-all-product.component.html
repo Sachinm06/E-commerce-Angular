@@ -1,26 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center " >
+            <a href="" class="text-secondary">
+                <img src="" alt="">
+                <h2>All Products</h2>
+            </a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="" class="text-secondary">
+                <img src="" alt="">
+                <h2>Trail mountain bikes</h2>
+            </a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="" class="text-secondary">
+                <img src="" alt="">
+                <h2>Fat bikes</h2>
+            </a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="" class="text-secondary">
+                <img src="" alt="">
+                <h2>Downhill mountain bikes</h2>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        <div class="row   row-cols-md-3  justify-content-center">
             <div class="col mb-5" *ngFor="let i of productData">
-                <div class="card h-100">
+                <div class="card ">
                     <!-- Product image-->
-                    <img class="card-img-top" style="height:200px ;" src="{{i.productImg}}" alt="..." />
-                    <!-- Product details-->
+                    <div class="product-image">
+                        <img src="{{i.productImg}}" alt="OFF-white Red Edition" draggable="false" />
+                    </div>
                     <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">{{i.productName}}</h5>
-                            <!-- Product price-->
-                            {{i.price}}
+                        <div class="product-info">
+                            <h2>{{i.productName}}</h2>
+                            <p>{{i.description}}</p>
+                            <div class="price">{{i.price}}</div>
                         </div>
                     </div>
                     <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                    <div class="btn">
+                        <a href="" style="text-decoration:none; color:black" routerLink="view-product/{{i.id}}">View</a>
+                        <!-- <button class="buy-btn">View</button> -->
+                        <button class="fav">
+                            <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
-          
+
         </div>
     </div>
 </section>
