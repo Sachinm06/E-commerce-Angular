@@ -1,6 +1,6 @@
 <div class="container-fluid mt-4 branddiv">
     <div class=" col-3">
-        <div class=" text-center " >
+        <div class=" text-center ">
             <a (click)="filter('')" class="text-secondary">
                 <img src="" alt="">
                 <h2>All Products</h2>
@@ -8,19 +8,22 @@
         </div>
         <div class=" text-center uk-animation-toggle">
             <a (click)="filter(1)" class="text-secondary">
-                <img class=" uk-card  uk-card-body uk-animation-shake"  style="border-radius:50% ;" src="https://i.postimg.cc/kX3XP9G2/spacex.png" alt="">
+                <img class=" uk-card  uk-card-body uk-animation-shake" style="border-radius:50% ;"
+                    src="https://i.postimg.cc/kX3XP9G2/spacex.png" alt="">
                 <!-- <h2>SpaceX</h2> -->
             </a>
         </div>
         <div class=" text-center  uk-animation-toggle">
             <a (click)="filter(2)" class="text-secondary">
-                <img class=" uk-card  uk-card-body uk-animation-shake" style="border-radius:50% ;" src="https://i.postimg.cc/fRfS2Ccg/blue.webp" alt="">
+                <img class=" uk-card  uk-card-body uk-animation-shake" style="border-radius:50% ;"
+                    src="https://i.postimg.cc/fRfS2Ccg/blue.webp" alt="">
                 <!-- <h2>Blue Origin</h2> -->
             </a>
         </div>
-        <div class=" text-center uk-animation-toggle" >
-            <a (click)="filter(3)"  class="text-secondary">
-                <img class="  uk-card  uk-card-body uk-animation-shake" style="border-radius:50% ;"  src="https://i.postimg.cc/Vs27mfxP/verging.jpg" alt="">
+        <div class=" text-center uk-animation-toggle">
+            <a (click)="filter(3)" class="text-secondary">
+                <img class="  uk-card  uk-card-body uk-animation-shake" style="border-radius:50% ;"
+                    src="https://i.postimg.cc/Vs27mfxP/verging.jpg" alt="">
                 <!-- <h2>Virgin Galactic</h2> -->
             </a>
         </div>
@@ -38,7 +41,7 @@
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row   row-cols-md-3  justify-content-center">
-            <div class="col mb-5" *ngFor="let i of filterCategory">
+            <div class="col mb-5" *ngFor="let i of filterCategory | filter : 'space' : 'productName' ">
                 <div class="card ">
                     <!-- Product image-->
                     <div class="product-image">

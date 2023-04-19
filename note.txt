@@ -231,3 +231,14 @@ access Params from URL
 
 ActivatedRoute - class used to acccess params
 params - method used to access params
+
+Pipe creation in Angular
+------------------------
+
+ng g pipe pipeName
+
+transform(value,filterString,propName)
+
+value        = pipe applying data
+filterString = key word used to filter data
+propName     = filter applying property in data

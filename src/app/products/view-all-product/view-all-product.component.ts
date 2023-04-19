@@ -11,7 +11,9 @@ export class ViewAllProductComponent implements OnInit {
 
   productData: any
   filterCategory: any
+
   constructor(private ps: ProductService) { }
+
   ngOnInit(): void {
     this.ps.viewAllProduct().subscribe((data: any) => {
       console.log(data);
